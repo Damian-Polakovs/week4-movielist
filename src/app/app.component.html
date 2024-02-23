@@ -229,13 +229,22 @@
         <h1>Damian Polakovs S00236491</h1>
       <h1>Movie Favourites</h1>
       <app-add-movie></app-add-movie>
-      <app-list-movies></app-list-movies>
+      </div>
+
+      <div class="container p-0">
+        <div class="row">
+          <div class="col-sm-6">
+            <app-movie-detail (onSelectedMovie)="selectedMovie($event)"></app-movie-detail>
+          </div>
+          <div class="col-sm-6">
+            <app-movie-detail [movieDetails]="mySelectedMovie"></app-movie-detail>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  
-    
 </main>
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
